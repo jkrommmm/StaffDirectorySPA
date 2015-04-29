@@ -4,4 +4,4 @@
  *ASSIGNMENT: Staff Directory
  */
 
-"use strict";2
+"use strict";
