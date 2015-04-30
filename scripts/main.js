@@ -5,3 +5,8 @@
  */
 
 "use strict";
+
+var staffApp = angular.module('staffApp', []);
+staffApp.controller('staffControl', function ($scope) {
+
+});
