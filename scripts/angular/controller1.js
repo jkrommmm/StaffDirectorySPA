@@ -16,7 +16,6 @@
 
 	function MainCtrl($scope) {
 		$scope.staff = setStaffData();
-		$scope.calendar = setCalendarData();
 
 		/** @type {Boolean} */
 		$scope.showStaff = false;

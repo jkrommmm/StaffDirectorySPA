@@ -8,6 +8,6 @@
 
 	"use strict";
 
-	angular.module('districtApp', []);
+	angular.module('staffApp', []);
 
 })();

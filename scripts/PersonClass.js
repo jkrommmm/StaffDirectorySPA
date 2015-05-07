@@ -19,3 +19,30 @@ function PersonClass(building, lastName, firstName, job, subject, grade, phone, 
 	this.email = email;
 }
 
+PersonClass.prototype = {
+	constructor: PersonClass,
+	getBuilding: function() {
+		return this.building;
+	},
+	getLastName: function() {
+		return this.lastName;
+	},
+	getFirstName: function() {
+		return this.firstName;
+	},
+	getJob: function() {
+		return this.job;
+	},
+	getSubject: function() {
+		return this.subject;
+	},
+	getGrade: function() {
+		return this.grade;
+	},
+	getPhone: function() {
+		return this.phone;
+	},
+	getEmail: function() {
+		return this.email;
+	}
+};

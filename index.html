@@ -14,41 +14,25 @@
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 
-	<body>
+	<body data-ng-controller="staffCtrl">
 		<fieldset>
 			<div>
 				<h1 class="text-center">Staff Directory</h1>
 			</div>
-			<div class="row text-center">
-				<div class="button medium round" id="sheridan">Sheridan</div>
-				<div class="button medium round" id="ottawa">Ottawa</div>
-				<div class="button medium round" id="MS">MS</div>
-				<div class="button medium round" id="HS">HS</div>
-				<div class="button medium round" id="lincoln">Lincoln</div>
-				<div class="button medium round" id="central">Central</div>
-				<div class="button medium round" id="spitler">Spitler</div>
+			<div id="staff" class="row text-center">
+				<div class="button round small" id="central_staff" data-ng-click="filterByBuilding('Central')">Central Elementary</div>
+				<div class="button round small" id="lincoln_staff" data-ng-click="filterByBuilding('Lincoln')">Lincoln</div>
+				<div class="button round small" id="ottawa_staff" data-ng-click="filterByBuilding('Ottawa')">Ottawa</div>
+				<div class="button round small" id="sheridan_staff" data-ng-click="filterByBuilding('Sheridan')">Sheridan</div>
+				<div class="button round small" id="montessori_staff" data-ng-click="filterByBuilding('Montessori')">Montessori</div>
+				<div class="button round small" id="ms_staff" data-ng-click="filterByBuilding('MS')">PMS</div>
+				<div class="button round small" id="hs_staff" data-ng-click="filterByBuilding('HS')">PHS</div>
+				<div class="button round small" id="spitler_staff" data-ng-click="filterByBuilding('Spitler')">Spitler</div>
 			</div>
 		</fieldset>
 
-		<div ng-controller="controller1">
-			<table>
-				<tr>
-					<th>School</th>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Grade</th>
-					<th>Job</th>
-					<th>Email</th>
-				</tr>
-				<tr ng-repeat="school in staff">
-					<td>{{person.school}}</td>
-					<td>{{person.first}}</td>
-					<td>{{person.last}}</td>
-					<td>{{person.grade}}</td>
-					<td>{{person.job}}</td>
-					<td>{{person.email}}</td>
-				</tr>
-			</table>
+		<div class="row" data-ng-if="showStaff == true">
+			<div data-ng-include="'pages/stafflist.html'"></div>
 		</div>
 
 		<!-- SCRIPTS -->

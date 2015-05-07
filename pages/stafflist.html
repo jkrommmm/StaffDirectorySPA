@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="row small-centered columns">
+		<div class="small-3 columns"><h4>NAME</h4></div>
+		<div class="small-4 columns"><h4>JOB</h4></div>
+		<div class="small-2 columns"><h4>PHONE</h4></div>
+		<div class="small-3 columns"><h4>EMAIL</h4></div>
+	</div>
+	<div class="pps-overflow">
+		<div class="row small-centered columns pps-font-small" data-ng-repeat="person in staff | filter:{building:filterBuilding}">
+			<div class="small-3 columns">{{ person.getLastName() }}, {{ person.getFirstName() }}</div>
+			<div class="small-4 columns">{{ person.getJob() }}  {{ person.getSubject() }}</div>
+			<div class="small-2 columns">{{ person.getPhone() }}</div>
+			<div class="small-3 columns">{{ person.getEmail() }}</div>
+		</div>
+	</div>
+</div>
