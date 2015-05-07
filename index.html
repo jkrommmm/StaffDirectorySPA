@@ -5,7 +5,7 @@
 	CREATED: 14.21.2015
 	ASSIGNMENT: Staff Directory SPA
 	-->
-<html lang="en" ng-app="staffApp">
+<html lang="en" data-ng-app="staffApp">
 	<head>
 		<meta charset="utf-8">
 		<title>Staff Directory</title>
@@ -18,7 +18,7 @@
 		<fieldset>
 			<div>
 				<h1 class="text-center">Staff Directory</h1>
-			</div
+			</div>
 			<div class="row text-center">
 				<div class="button medium round" id="sheridan">Sheridan</div>
 				<div class="button medium round" id="ottawa">Ottawa</div>
@@ -30,7 +30,7 @@
 			</div>
 		</fieldset>
 
-		<div ng-controller="staffControl">
+		<div ng-controller="controller1">
 			<table>
 				<tr>
 					<th>School</th>
@@ -40,7 +40,7 @@
 					<th>Job</th>
 					<th>Email</th>
 				</tr>
-				<tr ng-repeat="person in school">
+				<tr ng-repeat="school in staff">
 					<td>{{person.school}}</td>
 					<td>{{person.first}}</td>
 					<td>{{person.last}}</td>
@@ -55,6 +55,7 @@
 		<script src="scripts/angular.js"></script>
 		<script src="scripts/jquery-2.1.3.min.js"></script>
 		<script src="scripts/angular/app.js"></script>
+		<script src="scripts/angular/controller1.js"></script>
 		<script src="scripts/main.js"></script>
 	</body>
 </html>

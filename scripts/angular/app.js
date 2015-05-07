@@ -4,4 +4,10 @@
  *ASSIGNMENT: Staff Directory
  */
 
-"use strict";
+(function () {
+
+	"use strict";
+
+	angular.module('districtApp', []);
+
+})();
